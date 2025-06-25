@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bg4637gwf44j0"
+path="res://.godot/imported/Move7.wav-87b99223ae9fdb92da6c88e3ec798684.sample"
+
+[deps]
+
+source_file="res://Ninja Adventure - Asset Pack (# Name clash 2025-06-06 n7ntikC #)/Audio/Sounds/Menu/Move7.wav"
+dest_files=["res://.godot/imported/Move7.wav-87b99223ae9fdb92da6c88e3ec798684.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

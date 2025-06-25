@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cr4dfcqh8mw3s"
+path="res://.godot/imported/Alert6.wav-b8e4d4b4ecf151782d0b1d989b826eab.sample"
+
+[deps]
+
+source_file="res://Ninja Adventure - Asset Pack (# Name clash 2025-06-06 n7ntikC #)/Audio/Sounds/Alert/Alert6.wav"
+dest_files=["res://.godot/imported/Alert6.wav-b8e4d4b4ecf151782d0b1d989b826eab.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

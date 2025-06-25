@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dsjka7si0t2t0"
+path="res://.godot/imported/36 - Village.ogg-7860895296ffbc3a73cbc8dbd26c0fa6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Ninja Adventure - Asset Pack (# Name clash 2025-06-06 n7ntikC #)/Audio/Musics/36 - Village.ogg"
+dest_files=["res://.godot/imported/36 - Village.ogg-7860895296ffbc3a73cbc8dbd26c0fa6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
