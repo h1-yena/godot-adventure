@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://djb8puyxfjlqo"]
 
 [ext_resource type="PackedScene" uid="uid://cueldb7iajvx4" path="res://Scenes/Player/player.tscn" id="1_xuufh"]
-[ext_resource type="Texture2D" uid="uid://ddoxi28u1w3r0" path="res://Ninja Adventure - Asset Pack (# Name clash 2025-06-06 n7ntikC #)/Backgrounds/Tilesets/TilesetNature.png" id="2_102mq"]
-[ext_resource type="Texture2D" uid="uid://dbohh7svffqdg" path="res://Ninja Adventure - Asset Pack (# Name clash 2025-06-06 n7ntikC #)/Backgrounds/Tilesets/TilesetWater.png" id="3_00mv7"]
-[ext_resource type="Texture2D" uid="uid://cvniffbywkpoq" path="res://Ninja Adventure - Asset Pack (# Name clash 2025-06-06 n7ntikC #)/Backgrounds/Tilesets/TilesetReliefDetail.png" id="4_8ho00"]
+[ext_resource type="Texture2D" uid="uid://ddoxi28u1w3r0" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png" id="2_102mq"]
+[ext_resource type="Texture2D" uid="uid://dbohh7svffqdg" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png" id="3_00mv7"]
+[ext_resource type="Texture2D" uid="uid://cvniffbywkpoq" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetReliefDetail.png" id="4_8ho00"]
 [ext_resource type="PackedScene" uid="uid://coeq6m6mlfmoy" path="res://Scenes/SceneEntrance/scene_entrance.tscn" id="5_odg1s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5fck"]

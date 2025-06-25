@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://cueldb7iajvx4"]
 
 [ext_resource type="Script" uid="uid://cb7d1jve6f64e" path="res://Scenes/Player/player.gd" id="1_a3d8c"]
-[ext_resource type="Texture2D" uid="uid://3un1cp8orox0" path="res://Ninja Adventure - Asset Pack (# Name clash 2025-06-06 n7ntikC #)/Actor/Characters/Tengu/SeparateAnim/Walk.png" id="2_a3d8c"]
+[ext_resource type="Texture2D" uid="uid://3un1cp8orox0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Tengu/SeparateAnim/Walk.png" id="2_a3d8c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xpcdj"]
 atlas = ExtResource("2_a3d8c")
