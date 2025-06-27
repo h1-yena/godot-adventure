@@ -35,9 +35,12 @@ func _process(delta: float) -> void:
 	
 	
 	var collision: KinematicCollision2D = get_last_slide_collision()
-	if collision && collision.get_collider() is Block:
-		var collider_block: Block = collision.get_collider()
-		collider_block._push(velocity)
+	if collision:
+		var collider_node = collision.get_collider()
+		if collider_node is RigidBody2D:
+			var collision_normal: Vector2 = collision.get_normal()
+			
+			collider_node.apply_central_force(collision_normal)
 			
 	
 	move_and_slide()

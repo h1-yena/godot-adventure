@@ -1,7 +1,24 @@
 [gd_scene load_steps=5 format=3 uid="uid://doh0n55h70aoc"]
 
 [ext_resource type="Texture2D" uid="uid://dnu7ai306o7cx" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetDungeon.png" id="1_83tkd"]
-[ext_resource type="Script" uid="uid://5rq4alguhvjt" path="res://Scenes/Block/block.gd" id="1_wyci5"]
+
+[sub_resource type="GDScript" id="GDScript_83tkd"]
+script/source = "extends RigidBody2D
+class_name Block
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func _push(velocity: Vector2) -> void:
+	self.position += velocity
+	print(self.position)
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyci5"]
 size = Vector2(16, 16)
@@ -12,7 +29,7 @@ region = Rect2(128, 48, 16, 16)
 
 [node name="Block" type="RigidBody2D"]
 gravity_scale = 0.0
-script = ExtResource("1_wyci5")
+script = SubResource("GDScript_83tkd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_wyci5")
