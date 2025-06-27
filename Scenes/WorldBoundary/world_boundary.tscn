@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://dru7q2c8rm1hd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kec8a"]
+normal = Vector2(-0.0062892, -0.99998)
+distance = -15.9997
+
+[node name="WorldBoundary" type="StaticBody2D"]
+
+[node name="South" type="CollisionShape2D" parent="."]
+position = Vector2(0, 400)
+shape = SubResource("WorldBoundaryShape2D_kec8a")
+one_way_collision = true
+debug_color = Color(0.627451, 0.364706, 0.968627, 0.909804)
+
+[node name="North" type="CollisionShape2D" parent="."]
+position = Vector2(0, -400)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_kec8a")
+one_way_collision = true
+debug_color = Color(0, 0.6, 0.701961, 0.878431)
+
+[node name="East" type="CollisionShape2D" parent="."]
+position = Vector2(400, 0)
+rotation = 4.71239
+shape = SubResource("WorldBoundaryShape2D_kec8a")
+one_way_collision = true
+debug_color = Color(0, 0.6, 0.701961, 0.933333)
+
+[node name="West" type="CollisionShape2D" parent="."]
+position = Vector2(-400, 0)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_kec8a")
+one_way_collision = true
+debug_color = Color(0, 0.6, 0.701961, 0.882353)
