@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 		if collider_node is RigidBody2D:
 			var collision_normal: Vector2 = collision.get_normal()
 			
-			collider_node.apply_central_force(collision_normal)
+			collider_node.apply_central_force(-collision_normal * 10)
 			
 	
 	move_and_slide()

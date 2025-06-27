@@ -1073,3 +1073,6 @@ player_spawn_position = Vector2(101, -16)
 
 [node name="Block" parent="." instance=ExtResource("7_ohrk8")]
 position = Vector2(-28, -10)
+
+[node name="Block2" parent="." instance=ExtResource("7_ohrk8")]
+position = Vector2(26, -10)
