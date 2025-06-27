@@ -9,6 +9,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	move_player()
+	move_pushable()
+	
+func move_player() -> void:
 	var move_vector: Vector2 = \
 	 Input.get_vector("move_left","move_right","move_up","move_down")
 	
@@ -30,6 +35,8 @@ func _process(delta: float) -> void:
 		#print("The player isn't moving.")
 		$AnimatedSprite2D.stop()
 	
+	move_and_slide()
+func move_pushable() -> void:
 	# Get the last collision
 	# Check if it's the block we're colliding with
 	# If it's the block, then push it.
@@ -44,5 +51,4 @@ func _process(delta: float) -> void:
 			collider_node.apply_central_force(-collision_normal * push_strength)
 			
 	
-	move_and_slide()
 	
