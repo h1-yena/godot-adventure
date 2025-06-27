@@ -26,8 +26,19 @@ func _process(delta: float) -> void:
 		#print("The player is moving up!")
 		$AnimatedSprite2D.play("move_up")
 	else:
-		#aprint("The player isn't moving.")
+		#print("The player isn't moving.")
 		$AnimatedSprite2D.stop()
-		
+	
+	# Get the last collision
+	# Check if it's the block we're colliding with
+	# If it's the block, then push it.
+	
+	
+	var collision: KinematicCollision2D = get_last_slide_collision()
+	if collision && collision.get_collider() is Block:
+		var collider_block: Block = collision.get_collider()
+		collider_block._push(velocity)
+			
+	
 	move_and_slide()
 	
