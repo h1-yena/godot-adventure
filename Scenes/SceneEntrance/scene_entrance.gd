@@ -2,6 +2,7 @@ extends Area2D
 
 @export var next_scene: String
 @export var player_spawn_position: Vector2
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -16,10 +17,13 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	if body is Player:
 		SceneManager.player_spawn_position = player_spawn_position
-		print("The Player has entered me! D:")
+		print("The Player has entered me!")
 		get_tree().change_scene_to_file.call_deferred(next_scene)
 		print("Scene changed to: " + next_scene)
 
 
 func _on_body_exited(body: Node2D) -> void:
-	print("The Player has exited me! :D")
+	if body is Player:
+		print("The Player has exited me!")
+	
+	

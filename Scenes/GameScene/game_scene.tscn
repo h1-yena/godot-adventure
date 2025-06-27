@@ -1067,5 +1067,5 @@ move_speed = 60.0
 zoom = Vector2(5, 5)
 
 [node name="SceneEntrance" parent="." instance=ExtResource("6_12ovb")]
-position = Vector2(25, -60)
+position = Vector2(24, -60)
 player_spawn_position = Vector2(101, -16)
