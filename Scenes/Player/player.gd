@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 @export var move_speed: float = 100
+@export var push_strength: float = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -40,7 +41,7 @@ func _process(delta: float) -> void:
 		if collider_node is RigidBody2D:
 			var collision_normal: Vector2 = collision.get_normal()
 			
-			collider_node.apply_central_force(-collision_normal * 10)
+			collider_node.apply_central_force(-collision_normal * push_strength)
 			
 	
 	move_and_slide()
