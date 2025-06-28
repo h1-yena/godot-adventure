@@ -28,6 +28,11 @@ folder_colors={
 "res://Scenes/": "yellow"
 }
 
+[global_group]
+
+wall="A wall tilemaplayer"
+block="a pushable block for puzzles"
+
 [input]
 
 move_right={
