@@ -46,7 +46,7 @@ func move_pushable() -> void:
 	var collision: KinematicCollision2D = get_last_slide_collision()
 	if collision:
 		var collider_node = collision.get_collider()
-		if collider_node.is_in_group("block"):
+		if collider_node.is_in_group("pushable"):
 			var collision_normal: Vector2 = collision.get_normal()
 			
 			collider_node.apply_central_force(-collision_normal * push_strength)
