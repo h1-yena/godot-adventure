@@ -51,7 +51,5 @@ func move_pushable() -> void:
 			
 			collider_node.apply_central_force(-collision_normal * push_strength)
 		
-		if collider_node.is_in_group("wall"):
-			print("I've hit a wall! D:")
 	
 	
