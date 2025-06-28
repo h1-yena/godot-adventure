@@ -8,12 +8,12 @@ func _ready() -> void:
 	position = SceneManager.player_spawn_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	
 	move_player()
 	move_pushable()
-	
-	
+
+
 func move_player() -> void:
 	var move_vector: Vector2 = \
 	 Input.get_vector("move_left","move_right","move_up","move_down")
