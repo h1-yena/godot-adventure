@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcwg1ik71b33h"]
+
+[ext_resource type="Script" uid="uid://dhxvc4fqahtdq" path="res://Scenes/Doors/locked_door.gd" id="1_j0vj1"]
+[ext_resource type="Texture2D" uid="uid://cvniffbywkpoq" path="res://Scenes/Doors/TilesetReliefDetail.png" id="1_we7w2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxwg3"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0vj1"]
+atlas = ExtResource("1_we7w2")
+region = Rect2(32, 0, 16, 15)
+
+[node name="LockedDoor" type="StaticBody2D"]
+script = ExtResource("1_j0vj1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sxwg3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_j0vj1")
