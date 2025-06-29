@@ -1060,7 +1060,7 @@ tile_map_data = PackedByteArray("AAAGAAAAAAAMAAkAAAAGAP//AAAMAAcAAAAFAAAAAAAMAAk
 tile_set = SubResource("TileSet_kr7le")
 
 [node name="PuzzleButton" parent="." instance=ExtResource("8_j4few")]
-position = Vector2(37.1918, 10.9741)
+position = Vector2(-30.3025, -46.6798)
 
 [node name="ObstacleLayer" type="TileMapLayer" parent="."]
 y_sort_enabled = true
@@ -1073,14 +1073,11 @@ move_speed = 60.0
 [node name="Camera2D" type="Camera2D" parent="ObstacleLayer/Player"]
 zoom = Vector2(5, 5)
 
-[node name="LockedDoor" parent="ObstacleLayer" instance=ExtResource("10_20vrf")]
-position = Vector2(-8, -31)
+[node name="LockedDoor" parent="." instance=ExtResource("10_20vrf")]
+position = Vector2(24.2789, -59.6069)
 
 [node name="Block" parent="." instance=ExtResource("7_m4e74")]
 position = Vector2(-28, -10)
-
-[node name="Block2" parent="." instance=ExtResource("7_m4e74")]
-position = Vector2(26, -10)
 
 [node name="SceneEntrance" parent="." instance=ExtResource("6_qwu1a")]
 position = Vector2(24, -60)
@@ -1097,7 +1094,7 @@ position = Vector2(-1, -161)
 [node name="West" parent="WorldBoundary" index="3"]
 position = Vector2(-323, 0)
 
-[connection signal="pressed" from="PuzzleButton" to="ObstacleLayer/LockedDoor" method="_on_puzzle_button_pressed"]
-[connection signal="unpressed" from="PuzzleButton" to="ObstacleLayer/LockedDoor" method="_on_puzzle_button_unpressed"]
+[connection signal="pressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_pressed"]
+[connection signal="unpressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_unpressed"]
 
 [editable path="WorldBoundary"]
