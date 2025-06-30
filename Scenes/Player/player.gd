@@ -5,7 +5,8 @@ class_name Player
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	position = SceneManager.player_spawn_position
+	if SceneManager.player_spawn_position != Vector2(0,0):
+		position = SceneManager.player_spawn_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -35,8 +36,8 @@ func move_player() -> void:
 	else:
 		#print("The player isn't moving.")
 		$AnimatedSprite2D.stop()
-	
 	move_and_slide()
+	
 func move_pushable() -> void:
 	# Get the last collision
 	# Check if it's the block we're colliding with
