@@ -21,7 +21,7 @@ func _on_body_entered(body: Node2D) -> void:
 		if bodies_on_button == 1:
 			pressed.emit()
 			$AnimatedSprite2D.play("pressed")
-			print("I have been pressed!")
+			print(self.name + ": I have been pressed!!")
 		
 
 
@@ -31,4 +31,4 @@ func _on_body_exited(body: Node2D) -> void:
 		if bodies_on_button == 0:
 			unpressed.emit()
 			$AnimatedSprite2D.play("unpressed")
-			print("I am no longer being pressed!")
+			print(self.name + ": I am no longer being pressed!")

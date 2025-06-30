@@ -1075,6 +1075,7 @@ zoom = Vector2(5, 5)
 
 [node name="LockedDoor" parent="." instance=ExtResource("10_20vrf")]
 position = Vector2(24.2789, -59.6069)
+required_inputs_to_open = 2
 
 [node name="Block" parent="." instance=ExtResource("7_m4e74")]
 position = Vector2(-28, -10)
@@ -1094,7 +1095,15 @@ position = Vector2(-1, -161)
 [node name="West" parent="WorldBoundary" index="3"]
 position = Vector2(-323, 0)
 
+[node name="PuzzleButton2" parent="." instance=ExtResource("8_j4few")]
+position = Vector2(106, -2)
+
+[node name="Block2" parent="." instance=ExtResource("7_m4e74")]
+position = Vector2(48, -2)
+
 [connection signal="pressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_pressed"]
 [connection signal="unpressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_unpressed"]
+[connection signal="pressed" from="PuzzleButton2" to="LockedDoor" method="_on_puzzle_button_pressed"]
+[connection signal="unpressed" from="PuzzleButton2" to="LockedDoor" method="_on_puzzle_button_unpressed"]
 
 [editable path="WorldBoundary"]
