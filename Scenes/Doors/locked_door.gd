@@ -11,6 +11,7 @@ func _on_puzzle_button_pressed() -> void:
 		print(self.name + ": Input requirement reached! Opening door!")
 		visible = false
 		$CollisionShape2D.set_deferred("disabled", true)
+		$AudioStreamPlayer.play(0)
 
 
 func _on_puzzle_button_unpressed() -> void:

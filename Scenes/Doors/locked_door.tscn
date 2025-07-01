@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcwg1ik71b33h"]
+[gd_scene load_steps=6 format=3 uid="uid://dcwg1ik71b33h"]
 
 [ext_resource type="Script" uid="uid://dhxvc4fqahtdq" path="res://Scenes/Doors/locked_door.gd" id="1_j0vj1"]
 [ext_resource type="Texture2D" uid="uid://cvniffbywkpoq" path="res://Scenes/Doors/TilesetReliefDetail.png" id="1_we7w2"]
+[ext_resource type="AudioStream" uid="uid://bif5q1wgiwtgc" path="res://Ninja Adventure - Asset Pack/Audio/Jingles/Secret1.wav" id="3_ybxny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxwg3"]
 size = Vector2(16, 16)
@@ -18,3 +19,6 @@ shape = SubResource("RectangleShape2D_sxwg3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_j0vj1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ybxny")
