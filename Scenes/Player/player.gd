@@ -24,15 +24,19 @@ func move_player() -> void:
 	if velocity.x > 0:
 		#print("The player is moving right!")
 		$AnimatedSprite2D.play("move_right")
+		$InteractableArea.position = Vector2(5,0)
 	elif velocity.x < 0:
 		#print("The player is moving left!")
 		$AnimatedSprite2D.play("move_left")
+		$InteractableArea.position = Vector2(-5,0)
 	elif velocity.y > 0:
 		#print("The player is moving down!")
 		$AnimatedSprite2D.play("move_down")
+		$InteractableArea.position = Vector2(0,8)
 	elif velocity.y < 0:
 		#print("The player is moving up!")
 		$AnimatedSprite2D.play("move_up")
+		$InteractableArea.position = Vector2(0,-6)
 	else:
 		#print("The player isn't moving.")
 		$AnimatedSprite2D.stop()
@@ -54,3 +58,15 @@ func move_pushable() -> void:
 		
 	
 	
+
+
+func _on_interactable_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("interactable"):
+		body.can_interact = true
+		print(body.name + " has entered the interactable area!")
+
+
+func _on_interactable_area_body_exited(body: Node2D) -> void:
+	if body.is_in_group("interactable"):
+		body.can_interact = false
+		print(body.name + " has left the interactable area!")

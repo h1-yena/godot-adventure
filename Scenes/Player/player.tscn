@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cueldb7iajvx4"]
+[gd_scene load_steps=22 format=3 uid="uid://cueldb7iajvx4"]
 
 [ext_resource type="Script" uid="uid://cb7d1jve6f64e" path="res://Scenes/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://3un1cp8orox0" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Tengu/SeparateAnim/Walk.png" id="2_a3d8c"]
@@ -142,6 +142,9 @@ animations = [{
 radius = 6.0
 height = 14.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3d8c"]
+size = Vector2(8, 8)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 7
@@ -157,3 +160,13 @@ frame_progress = 0.569055
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_a3d8c")
+
+[node name="InteractableArea" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea"]
+shape = SubResource("RectangleShape2D_a3d8c")
+debug_color = Color(0.603919, 0.536702, 0.211122, 0.42)
+
+[connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_body_entered"]
+[connection signal="body_exited" from="InteractableArea" to="." method="_on_interactable_area_body_exited"]

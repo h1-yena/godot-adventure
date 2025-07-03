@@ -13,10 +13,10 @@ atlas = ExtResource("1_3am0f")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0s07e"]
-font_size = 30
+font_size = 48
 font_color = Color(0, 0, 0, 1)
 
-[node name="NPC" type="StaticBody2D"]
+[node name="NPC" type="StaticBody2D" groups=["interactable"]]
 script = ExtResource("1_bjna2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
