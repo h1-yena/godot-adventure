@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0t6aqxdoxwgs"]
+[gd_scene load_steps=6 format=3 uid="uid://b0t6aqxdoxwgs"]
 
 [ext_resource type="Texture2D" uid="uid://bdk2hri8k2l65" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Lion/SpriteSheet.png" id="1_3am0f"]
 [ext_resource type="Script" uid="uid://c68q552twxaxd" path="res://Scenes/NPC/npc.gd" id="1_bjna2"]
+[ext_resource type="Texture2D" uid="uid://ctyrfnchfe8hc" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/DialogBoxFaceset.png" id="3_0s07e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjna2"]
 size = Vector2(16, 16)
@@ -18,3 +19,20 @@ shape = SubResource("RectangleShape2D_bjna2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_0s07e")
+
+[node name="DialogCanvas" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="DialogBox" type="TextureRect" parent="DialogCanvas"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -542.5
+offset_top = -210.0
+offset_right = 542.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+texture = ExtResource("3_0s07e")
