@@ -7,7 +7,7 @@ func _process(delta: float) -> void:
 		
 		print(self.name + ": Action pressed!")
 		
-		if $DialogCanvas.visible == false:
-			$DialogCanvas.visible = true
-		else:
+		if $DialogCanvas.visible:
 			$DialogCanvas.visible = false
+		else:
+			$DialogCanvas.visible = true
