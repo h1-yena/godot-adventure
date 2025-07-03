@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bbht1x5ykdnwm"]
+[gd_scene load_steps=25 format=4 uid="uid://bbht1x5ykdnwm"]
 
 [ext_resource type="Texture2D" uid="uid://bf2d6n6pit5pf" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="1_gxs7k"]
 [ext_resource type="Texture2D" uid="uid://ddoxi28u1w3r0" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png" id="2_j4few"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cueldb7iajvx4" path="res://Scenes/Player/player.tscn" id="5_fblxe"]
 [ext_resource type="PackedScene" uid="uid://coeq6m6mlfmoy" path="res://Scenes/SceneEntrance/scene_entrance.tscn" id="6_qwu1a"]
 [ext_resource type="PackedScene" uid="uid://doh0n55h70aoc" path="res://Scenes/Block/block.tscn" id="7_m4e74"]
+[ext_resource type="Texture2D" uid="uid://c3eoj0gm44oit" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Pig/SpriteSheet.png" id="7_qwu1a"]
 [ext_resource type="PackedScene" uid="uid://brt62sjk5d7lx" path="res://Scenes/PuzzleButton/puzzle_button.tscn" id="8_j4few"]
+[ext_resource type="Texture2D" uid="uid://c76l4bw2ej8er" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Pig/Faceset.png" id="8_m4e74"]
 [ext_resource type="PackedScene" uid="uid://dru7q2c8rm1hd" path="res://Scenes/WorldBoundary/world_boundary.tscn" id="8_qjyeq"]
 [ext_resource type="PackedScene" uid="uid://dcwg1ik71b33h" path="res://Scenes/Doors/locked_door.tscn" id="10_20vrf"]
 [ext_resource type="PackedScene" uid="uid://b0t6aqxdoxwgs" path="res://Scenes/NPC/npc.tscn" id="11_lfp54"]
@@ -1050,6 +1052,10 @@ sources/0 = SubResource("TileSetAtlasSource_ohrk8")
 sources/1 = SubResource("TileSetAtlasSource_elpgg")
 sources/2 = SubResource("TileSetAtlasSource_nr542")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjyeq"]
+atlas = ExtResource("7_qwu1a")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20vrf"]
 size = Vector2(168, 15)
 
@@ -1079,6 +1085,48 @@ position = Vector2(-30.3025, -46.6798)
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD6/wEAAAACAAAAAAAEAAIAAAACAAAAAAD8/wMAAAAAAAIAAAAEAAQAAAAAAAIAAAAFAPz/AAAAAAIAAAD6//z/AAAAAAIAAAD+//v/AAAAAAAAAAAEAPn/AAAAAAAAAAD8//n/AAAAAAAAAAD8/wUAAAAAAAIAAAD5/wUAAAAAAAIAAAD4/wcAAAAAAAIAAAD8/wcAAAAAAAIAAAAEAAYAAAAAAAIAAAAHAAYAAAAAAAIAAAAHAAQAAAAAAAIAAAAKAAIAAAAAAAIAAAALAAUAAAAAAAIAAAANAAIAAAAAAAIAAAAPAAAAAAAAAAIAAAAQAAMAAAAAAAIAAAAIAPz/AAAAAAIAAAALAPr/AAAAAAIAAAAPAPn/AAAAAAIAAAAHAPj/AAAAAAIAAAAMAPf/AAAAAAIAAAD///j/AAAAAAIAAAD2//7/AAAAAAIAAADx//3/AAAAAAIAAADu////AAAAAAIAAAD0//v/AAAAAAIAAADu//r/AAAAAAIAAADu//z/AAAAAAIAAADx//r/AAAAAAIAAADt/wUAAAAAAAIAAADw/wQAAAAAAAIAAADw/wUAAAAAAAIAAADx/wYAAAAAAAIAAAD1/wQAAAAAAAIAAAD4/wIAAAAAAAIAAAD6/wgAAAAAAAIAAAD6/wkAAAAAAAIAAAD6/wsAAAAAAAIAAAD4/w0AAAAAAAIAAAD3/xAAAAAAAAIAAAD3/xEAAAAAAAIAAAD4/xMAAAAAAAIAAAD4/xQAAAAAAAIAAAD9/xQAAAAAAAIAAAABABMAAAAAAAIAAAACABMAAAAAAAIAAAAEABAAAAAAAAIAAAADAA8AAAAAAAIAAAADAAwAAAAAAAIAAAACAAoAAAAAAAIAAAADAAgAAAAAAAIAAAASAAAAAAAAAAIAAAAVAAAAAAAAAAIAAAAVAP3/AAAAAAIAAAAVAPz/AAAAAAIAAAAVAPr/AAAAAAIAAAAVAPn/AAAAAAIAAAASAPj/AAAAAAIAAAD9/wkAAAAAAAAAAAD7//7/AAAAAAAAAAAHAP7/AAAAAAAAAAAOAPv/AAAAAAAAAAD5/w8AAAAAAAAAAAABAA4AAAACAAAAAAD7/xMAAAACAAAAAAD+/wUAAAACAAAAAAACAAUAAAACAAAAAAD4/wMAAAACAAAAAADz/wMAAAACAAAAAADw////AAACAAAAAAD0//7/AAACAAAAAADs/wMAAAACAAAAAAABAPr/AAAAAAIAAAADAPf/AAAAAAIAAAABAPz/AgAAAAcAAAA=")
 tile_set = SubResource("TileSet_oi8ly")
+
+[node name="NPC" parent="ObstacleLayer" instance=ExtResource("11_lfp54")]
+position = Vector2(64, -41)
+
+[node name="DialogCanvas" parent="ObstacleLayer/NPC" index="2"]
+visible = false
+
+[node name="DialogText" parent="ObstacleLayer/NPC/DialogCanvas/DialogBox" index="0"]
+text = "I am a lion! Rawr!"
+
+[node name="Faceset" parent="ObstacleLayer/NPC/DialogCanvas/DialogBox" index="1"]
+layout_mode = 0
+offset_left = 21.5
+offset_top = 50.0
+offset_right = 158.5
+offset_bottom = 187.0
+
+[node name="NPCName" parent="ObstacleLayer/NPC/DialogCanvas/DialogBox" index="2"]
+text = "Lion"
+
+[node name="NPC2" parent="ObstacleLayer" instance=ExtResource("11_lfp54")]
+position = Vector2(96, -41)
+
+[node name="Sprite2D" parent="ObstacleLayer/NPC2" index="1"]
+texture = SubResource("AtlasTexture_qjyeq")
+
+[node name="DialogCanvas" parent="ObstacleLayer/NPC2" index="2"]
+visible = false
+
+[node name="DialogText" parent="ObstacleLayer/NPC2/DialogCanvas/DialogBox" index="0"]
+text = "I am a pig!"
+
+[node name="Faceset" parent="ObstacleLayer/NPC2/DialogCanvas/DialogBox" index="1"]
+layout_mode = 0
+offset_left = 20.5
+offset_top = 51.0
+offset_right = 157.5
+offset_bottom = 188.0
+texture = ExtResource("8_m4e74")
+
+[node name="NPCName" parent="ObstacleLayer/NPC2/DialogCanvas/DialogBox" index="2"]
+text = "Pig"
 
 [node name="Player" parent="ObstacleLayer" instance=ExtResource("5_fblxe")]
 move_speed = 60.0
@@ -1136,12 +1184,11 @@ position = Vector2(121.25, -6.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_qwu1a")
 
-[node name="NPC" parent="." instance=ExtResource("11_lfp54")]
-position = Vector2(64, -41)
-
 [connection signal="pressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_pressed"]
 [connection signal="unpressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_unpressed"]
 [connection signal="pressed" from="PuzzleButton2" to="LockedDoor" method="_on_puzzle_button_pressed"]
 [connection signal="unpressed" from="PuzzleButton2" to="LockedDoor" method="_on_puzzle_button_unpressed"]
 
+[editable path="ObstacleLayer/NPC"]
+[editable path="ObstacleLayer/NPC2"]
 [editable path="WorldBoundary"]
