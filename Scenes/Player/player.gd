@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 	
 	move_player()
 	move_pushable()
-
+	move_and_slide()
 
 func move_player() -> void:
 	var move_vector: Vector2 = \
@@ -36,7 +36,7 @@ func move_player() -> void:
 	else:
 		#print("The player isn't moving.")
 		$AnimatedSprite2D.stop()
-	move_and_slide()
+	
 	
 func move_pushable() -> void:
 	# Get the last collision

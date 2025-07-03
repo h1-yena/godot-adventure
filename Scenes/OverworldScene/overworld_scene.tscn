@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bbht1x5ykdnwm"]
+[gd_scene load_steps=22 format=4 uid="uid://bbht1x5ykdnwm"]
 
 [ext_resource type="Texture2D" uid="uid://bf2d6n6pit5pf" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="1_gxs7k"]
 [ext_resource type="Texture2D" uid="uid://ddoxi28u1w3r0" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png" id="2_j4few"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://brt62sjk5d7lx" path="res://Scenes/PuzzleButton/puzzle_button.tscn" id="8_j4few"]
 [ext_resource type="PackedScene" uid="uid://dru7q2c8rm1hd" path="res://Scenes/WorldBoundary/world_boundary.tscn" id="8_qjyeq"]
 [ext_resource type="PackedScene" uid="uid://dcwg1ik71b33h" path="res://Scenes/Doors/locked_door.tscn" id="10_20vrf"]
+[ext_resource type="PackedScene" uid="uid://b0t6aqxdoxwgs" path="res://Scenes/NPC/npc.tscn" id="11_lfp54"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04h35"]
 texture = ExtResource("1_gxs7k")
@@ -1134,6 +1135,9 @@ shape = SubResource("RectangleShape2D_fblxe")
 position = Vector2(121.25, -6.5)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_qwu1a")
+
+[node name="NPC" parent="." instance=ExtResource("11_lfp54")]
+position = Vector2(64, -41)
 
 [connection signal="pressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_pressed"]
 [connection signal="unpressed" from="PuzzleButton" to="LockedDoor" method="_on_puzzle_button_unpressed"]

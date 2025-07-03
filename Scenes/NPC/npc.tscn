@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0t6aqxdoxwgs"]
+
+[ext_resource type="Texture2D" uid="uid://bdk2hri8k2l65" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Lion/SpriteSheet.png" id="1_3am0f"]
+[ext_resource type="Script" uid="uid://c68q552twxaxd" path="res://Scenes/NPC/npc.gd" id="1_bjna2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjna2"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0s07e"]
+atlas = ExtResource("1_3am0f")
+region = Rect2(0, 0, 16, 16)
+
+[node name="NPC" type="StaticBody2D"]
+script = ExtResource("1_bjna2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bjna2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_0s07e")
