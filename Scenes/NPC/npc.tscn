@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0t6aqxdoxwgs"]
+[gd_scene load_steps=8 format=3 uid="uid://b0t6aqxdoxwgs"]
 
 [ext_resource type="Texture2D" uid="uid://bdk2hri8k2l65" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Lion/SpriteSheet.png" id="1_3am0f"]
 [ext_resource type="Script" uid="uid://c68q552twxaxd" path="res://Scenes/NPC/npc.gd" id="1_bjna2"]
 [ext_resource type="Texture2D" uid="uid://ctyrfnchfe8hc" path="res://Ninja Adventure - Asset Pack/Ui/Dialog/DialogBoxFaceset.png" id="3_0s07e"]
+[ext_resource type="Texture2D" uid="uid://j4cfvd7p047d" path="res://Ninja Adventure - Asset Pack/Actor/Characters/Lion/Faceset.png" id="4_aqj1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjna2"]
 size = Vector2(16, 16)
@@ -10,6 +11,10 @@ size = Vector2(16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0s07e"]
 atlas = ExtResource("1_3am0f")
 region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0s07e"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [node name="NPC" type="StaticBody2D"]
 script = ExtResource("1_bjna2")
@@ -36,3 +41,19 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 4
 texture = ExtResource("3_0s07e")
+
+[node name="DialogText" type="Label" parent="DialogCanvas/DialogBox"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 60.0
+offset_right = 1059.0
+offset_bottom = 173.0
+text = "Hello World!"
+label_settings = SubResource("LabelSettings_0s07e")
+
+[node name="Faceset" type="TextureRect" parent="DialogCanvas/DialogBox"]
+offset_left = 22.0
+offset_top = 54.0
+offset_right = 159.0
+offset_bottom = 191.0
+texture = ExtResource("4_aqj1y")
