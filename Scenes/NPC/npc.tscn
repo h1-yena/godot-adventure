@@ -21,6 +21,7 @@ font_size = 28
 font_color = Color(0, 0, 0, 1)
 
 [node name="NPC" type="StaticBody2D" groups=["interactable"]]
+process_mode = 3
 script = ExtResource("1_bjna2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -56,6 +57,7 @@ label_settings = SubResource("LabelSettings_0s07e")
 autowrap_mode = 3
 
 [node name="Faceset" type="TextureRect" parent="DialogCanvas/DialogBox"]
+layout_mode = 0
 offset_left = 22.0
 offset_top = 54.0
 offset_right = 159.0
