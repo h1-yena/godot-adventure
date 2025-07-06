@@ -11,13 +11,24 @@ var is_activated: bool = false
 
 func _process(delta: float) -> void:
 	
-	if Input.is_action_just_pressed("interact") and can_interact:
+	if switch_has_been_interacted_with():
 		print("The Player interacted with the switch!")
 		if is_activated:
-			$AnimatedSprite2D.play("deactivated")
-			switch_deactivated.emit()
-			is_activated = false
+			deactivate_switch()
 		else:
-			$AnimatedSprite2D.play("activated")
-			switch_activated.emit()
-			is_activated = true
+			activate_switch()
+			
+func deactivate_switch() -> void:
+	
+	$AnimatedSprite2D.play("deactivated")
+	switch_deactivated.emit()
+	is_activated = false
+
+func activate_switch() -> void:
+	
+	$AnimatedSprite2D.play("activated")
+	switch_activated.emit()
+	is_activated = true
+
+func switch_has_been_interacted_with() -> bool:
+	return Input.is_action_just_pressed("interact") and can_interact
