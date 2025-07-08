@@ -18,8 +18,3 @@ func _process(delta: float) -> void:
 			get_tree().paused = false
 			dialog_index = 0
 		
-
-		#if dialog_index == dialog_lines.size() - 1:
-		#	$DialogCanvas.visible = false
-		#	get_tree().paused = false
-						
